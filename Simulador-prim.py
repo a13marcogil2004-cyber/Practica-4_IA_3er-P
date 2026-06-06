@@ -47,3 +47,14 @@ def prim(grafo, inicio):
                     aristas,
                     (peso_vecino, destino, vecino)
                 )
+
+    return mst, costo_total
+
+
+mst, costo = prim(grafo, 'A')
+
+print("\nÁRBOL PARCIAL MÍNIMO")
+for origen, destino, peso in mst:
+    print(f"{origen} -- {destino} ({peso})")
+
+print(f"\nCosto total: {costo}")
