@@ -36,3 +36,14 @@ def prim(grafo, inicio):
         print(f"Se agrega la arista: {origen} -> {destino}")
         print(f"Peso: {peso}")
         print(f"Costo acumulado: {costo_total}")
+        print(f"Nodos visitados: {visitados}")
+        print("-" * 35)
+
+        paso += 1
+
+        for vecino, peso_vecino in grafo[destino]:
+            if vecino not in visitados:
+                heapq.heappush(
+                    aristas,
+                    (peso_vecino, destino, vecino)
+                )
