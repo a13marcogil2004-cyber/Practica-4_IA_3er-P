@@ -31,3 +31,8 @@ def prim(grafo, inicio):
         visitados.add(destino)
         mst.append((origen, destino, peso))
         costo_total += peso
+
+        print(f"PASO {paso}")
+        print(f"Se agrega la arista: {origen} -> {destino}")
+        print(f"Peso: {peso}")
+        print(f"Costo acumulado: {costo_total}")
